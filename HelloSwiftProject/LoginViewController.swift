@@ -17,7 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var scrollView: UIScrollView!
 
-	let startPoint : CGPoint = CGPointMake(0, -50)
+	let startPoint : CGPoint = CGPointMake(0, -65)
 	
 	var textVieewFrame: CGRect!
 
@@ -54,7 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
-		scrollView.setContentOffset(startPoint, animated: true)
 		return true
 	}
 
@@ -85,16 +84,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 				let keyboardCorrectFrame = view.convertRect(keyboardFrame, fromView: nil)
 				var visibleRect = self.view.frame
 				visibleRect.size.height -= keyboardCorrectFrame.size.height
+				let textViewCorrectFrame = view.convertRect(self.textVieewFrame, fromView: scrollView)
 				let scrollPoint = CGPointMake(0.0, self.textVieewFrame.origin.y + self.textVieewFrame.size.height + 10 - visibleRect.size.height)
-				if (!CGRectContainsPoint(visibleRect, scrollPoint)) {
+				if (!CGRectContainsPoint(visibleRect, CGPointMake(0.0, textViewCorrectFrame.origin.y + textViewCorrectFrame.size.height + 10))) {
 					scrollView.setContentOffset(scrollPoint, animated: true)
 				}
 			}
 		}
+/*-----------------------------------------------------------------------------*/
+//		if let userInfo = notification.userInfo {
+//			if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue() {
+//				let keyboardCorrectFrame = view.convertRect(keyboardFrame, fromView: nil)
+//				var visibleRect = self.view.frame
+//				visibleRect.size.height -= keyboardCorrectFrame.size.height
+//				let scrollPoint = CGPointMake(0.0, self.textVieewFrame.origin.y + self.textVieewFrame.size.height + 10 - visibleRect.size.height)
+////				if (!CGRectContainsPoint(visibleRect, scrollPoint)) {
+//					scrollView.setContentOffset(scrollPoint, animated: true)
+////				}
+//			}
+//		}
 	}
 
 	func keyboardWillBeHidden(notification: NSNotification) {
-		//		scrollView.setContentOffset(CGPointZero, animated: true)
+//		scrollView.setContentOffset(startPoint, animated: true)
 	}
 
 	//MARK: - Utility Functions
