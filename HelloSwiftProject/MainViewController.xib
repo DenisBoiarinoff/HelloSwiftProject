@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HelloSwiftProject" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milky-Way-galaxy-stars_750x1334_iPhone_6_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="uDl-xi-j7y">
+                    <rect key="frame" x="0.0" y="-233" width="600" height="1066"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uDl-xi-j7y" secondAttribute="height" multiplier="40:71" id="Dnv-U0-PME"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P2-se-89f">
+                    <rect key="frame" x="220" y="285" width="160" height="30"/>
+                    <color key="backgroundColor" red="0.22167809817026712" green="0.69902146464646464" blue="0.6984645258235731" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <state key="normal" title="To text controller">
+                        <color key="titleColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="120" y="391" width="160" height="18"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                        <rect key="frame" x="320" y="391" width="160" height="18"/>
+                    </variation>
+                    <connections>
+                        <action selector="toTextController:" destination="-1" eventType="touchUpInside" id="laG-xE-zmA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5c-5K-QiU">
+                    <rect key="frame" x="220" y="345" width="160" height="30"/>
+                    <color key="backgroundColor" red="0.22167809817026712" green="0.69902146464646464" blue="0.6984645258235731" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <state key="normal" title="To table controller">
+                        <color key="titleColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="120" y="471" width="160" height="18"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                        <rect key="frame" x="320" y="471" width="160" height="18"/>
+                    </variation>
+                    <connections>
+                        <action selector="toTableController:" destination="-1" eventType="touchUpInside" id="MTu-PU-R6U"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcH-UC-iwd">
+                    <rect key="frame" x="220" y="225" width="160" height="30"/>
+                    <color key="backgroundColor" red="0.22167809817026712" green="0.69902146464646464" blue="0.6984645258235731" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <state key="normal" title="To login сontroller">
+                        <color key="titleColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="120" y="311" width="160" height="18"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                        <rect key="frame" x="320" y="311" width="160" height="18"/>
+                    </variation>
+                    <connections>
+                        <action selector="toLoginController:" destination="-1" eventType="touchUpInside" id="LzN-da-J2m"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.54230057565789469" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hcH-UC-iwd" firstAttribute="centerX" secondItem="uDl-xi-j7y" secondAttribute="centerX" id="1Wc-dQ-dlV"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.05" id="E3f-Dn-tqj"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="centerX" secondItem="uDl-xi-j7y" secondAttribute="centerX" id="IJ6-kX-w6a"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="height" secondItem="hcH-UC-iwd" secondAttribute="height" id="Kl4-ps-IEp"/>
+                <constraint firstItem="uDl-xi-j7y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kzq-GR-39a"/>
+                <constraint firstItem="uDl-xi-j7y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="L5L-OA-0gR"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="width" secondItem="uDl-xi-j7y" secondAttribute="width" multiplier="0.5" id="OSc-ua-W54"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="width" secondItem="hcH-UC-iwd" secondAttribute="width" id="Vev-Ay-Ayz"/>
+                <constraint firstItem="A5c-5K-QiU" firstAttribute="centerX" secondItem="uDl-xi-j7y" secondAttribute="centerX" id="bEj-mX-vbf"/>
+                <constraint firstItem="A5c-5K-QiU" firstAttribute="height" secondItem="hcH-UC-iwd" secondAttribute="height" id="bqm-mb-c1a"/>
+                <constraint firstItem="A5c-5K-QiU" firstAttribute="centerY" secondItem="uDl-xi-j7y" secondAttribute="centerY" multiplier="1.2" id="fnt-xR-EkW"/>
+                <constraint firstItem="uDl-xi-j7y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h0c-KP-QkY"/>
+                <constraint firstItem="hcH-UC-iwd" firstAttribute="centerY" secondItem="uDl-xi-j7y" secondAttribute="centerY" multiplier="0.8" id="iHY-Ex-zeQ"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="centerY" secondItem="uDl-xi-j7y" secondAttribute="centerY" id="qNE-SS-T4G"/>
+                <constraint firstItem="A5c-5K-QiU" firstAttribute="width" secondItem="hcH-UC-iwd" secondAttribute="width" id="tTk-vs-T4n"/>
+                <constraint firstAttribute="trailing" secondItem="uDl-xi-j7y" secondAttribute="trailing" id="vTj-BO-5rg"/>
+                <constraint firstItem="0P2-se-89f" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.25" id="wqp-uF-cDT"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="OSc-ua-W54"/>
+                    <exclude reference="wqp-uF-cDT"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="OSc-ua-W54"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="wqp-uF-cDT"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="444" y="430"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Milky-Way-galaxy-stars_750x1334_iPhone_6_wallpaper" width="750" height="1334"/>
+    </resources>
+</document>
