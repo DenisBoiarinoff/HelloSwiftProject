@@ -11,13 +11,14 @@ import UIKit
 class TableViewController: UITableViewController {
 
 	// Data model: These strings will be the data for the table view cells
-	let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
 
-	let students = ["Tom", "Bill", "Tom", "Joe", "Tom"]
-
-	let studentsPhone = ["12345", "23456", "34567", "45678", "56789"]
-
-	let studentsEmail = ["Tom@mail.com", "Bill@mail.com", "Tom1@mail.com", "Joe@mail.com", "Tom2@mail.com"]
+	let studentsGroup: NSDictionary? = [
+		0 : ["name": "Tom", "phone": "12345", "email": "Tom@mail.com"],
+		1 : ["name": "Bill", "phone": "23456", "email": "Bill@mail.com"],
+		2 : ["name": "Tom", "phone": "34567", "email": "Tom1@mail.com"],
+		3 : ["name": "Joe", "phone": "45678", "email": "Joe@mail.com"],
+		4 : ["name": "Tom", "phone": "56789", "email": "Tom2@mail.com"],
+	]
 
 	// cell reuse id (cells that scroll out of view can be reused)
 	let cellReuseIdentifier = "cell"
@@ -30,15 +31,9 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
 		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-//		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: studentTableViewCell)
 
 		 tableView.registerNib(UINib(nibName: studentTableViewCell, bundle: nil), forCellReuseIdentifier: studentTableViewCell)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +50,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.students.count
+        return studentsGroup!.count
     }
 
 
@@ -63,9 +58,11 @@ class TableViewController: UITableViewController {
 
 		let cell = tableView.dequeueReusableCellWithIdentifier(studentTableViewCell, forIndexPath: indexPath) as! StudentTableViewCell
 
-		cell.studentName.text = self.students[indexPath.row]
-		cell.studentPhone.text = self.studentsPhone[indexPath.row]
-		cell.studentEmeil.text = self.studentsEmail[indexPath.row]
+		let student: NSDictionary = studentsGroup![indexPath.row] as! NSDictionary
+
+		cell.studentName.text = student["name"] as? String;
+		cell.studentPhone.text = student["phone"]as? String;
+		cell.studentEmeil.text = student["email"]as? String;
 
         return cell
     }
